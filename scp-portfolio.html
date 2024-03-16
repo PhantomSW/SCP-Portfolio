@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>SCP Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scp-portfolio.css">
+</head>
+<body>
+    <header>
+      <h1>SCP Thomas's Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li class="dropdown">
+            <a href="#project">Projects</a>
+            <div class="dropdown-content">
+              <a href="#1">Project 1</a>
+              <a href="#2">Project 2</a>
+            </div>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+
+      <section id="me" style="display: none;">
+        <img src="image/chipi.jpg" alt="Cat" id="chipiImage">
+        <p>chipi chipi chapa chapa</p>
+        <br>
+      </section>
+      <audio id="chipiAudio" src="music/chipi.mp3" autoplay></audio>
+
+      <section id="about">
+        <h2>About me</h2>
+        <p>Iamque non umbratis fallaciis res agebatur, sed qua palatium est extra muros, armatis omne circumdedit. ingressusque obscuro iam die, ablatis regiis indumentis Caesarem tunica texit et paludamento communi, eum post haec nihil passurum velut mandato principis iurandi crebritate confirmans et statim inquit exsurge et inopinum carpento privato inpositum ad Histriam duxit prope oppidum Polam, ubi quondam peremptum Constantini filium accepimus Crispum.</p>
+        <button id="showChipi">CHIPI CHIPIIIII</button>
+        <br>
+      </section>
+
+      <section id="project">
+        <h2>My projects</h2>
+        <div class="container">
+          <a href="#" class="card">
+            <img src="image/safe.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">SAFE</span>
+              <p>List of all Safe SCPs</p>
+            </div>
+          </a>
+          
+          <a href="#" class="card">
+            <img src="image/euclid.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">EUCLID</span>
+              <p>List of all Euclid SCPs</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <img src="image/keter.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">KETER</span>
+              <p>List of all Keter SCPs</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <img src="image/explained.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">EXPLAINED</span>
+              <p>List of all Explained SCPs</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <img src="image/neutralized.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">NEUTRALIZED</span>
+              <p>List of all Neutralized SCPs</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <img src="image/thuamiel.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">THAUMIEL</span>
+              <p>List of all Thaumiel SCPs</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <img src="image/esoteric.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">ESOTERIC</span>
+              <p>List of all Esoteric SCPs</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <img src="image/apollyon.png" alt="SCP Foundation Emblem" class="card-image">
+            <div class="card-content">
+              <span class="card-title">APOLLYON</span>
+              <p>List of all Apollyon SCPs</p>
+            </div>
+          </a>
+
+        </div>
+        <br>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+      </section>
+
+    </main>
+    <footer>
+      <p>&copy; 2024 Thomas's Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+
+<script>
+  document.getElementById("chipiImage").addEventListener("mouseover", function() {
+    var audio = document.getElementById("chipiAudio");
+    audio.play();
+  });
+
+  document.getElementById("chipiImage").addEventListener("mouseout", function() {
+    var audio = document.getElementById("chipiAudio");
+    audio.pause();
+    audio.currentTime = 0;
+  });
+
+  document.getElementById("showChipi").addEventListener("click", function() {
+    document.getElementById("me").style.display = "block";
+    document.getElementById("showChipi").style.display = "none";
+  });
+
+</script>
+  
+</html>
